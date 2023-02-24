@@ -1,0 +1,173 @@
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+  background: linear-gradient(-45deg, #122C69, #6F94EC, #314269, #1F4CB5);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.wrapper {
+  max-width: 65rem;
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 6.5%;
+  text-align: center;
+  background: #2761E8;
+  border: 0.5rem solid #34495e;
+  box-shadow: 10px 15px 15px #1c2833ab;
+}
+
+.btn_ini {
+  font-size: 2em;
+  background: #2BA2FF;
+  color: #fff;
+  border: 0.25rem solid #5527E8;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn_ini:hover {
+  color: #3498db;
+}
+
+.btn_ini::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+
+.btn_ini[class^="slide"]::after {
+  transition: all 0.35s;
+}
+
+.btn_ini[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+
+.btn_ini.slide_from_top::after {
+  left: 0;
+  right: 0;
+  top: -100%;
+  bottom: 100%;
+}
+
+.btn_ini[class^="grow"]::after {
+  transition: all 0.3s ease;
+}
+
+.btn_ini[class^="grow"]:hover::after {
+  transition: all 0.3s ease-out;
+}
+
+#escura{
+  width: 100%;
+  height: 100%;
+  opacity: 95%;
+  background-color: black;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  transition: all 2s;
+  position: absolute;
+  top: 0%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.jogo{
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: teal;
+  border: 3px solid black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.685);
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.celula{
+  width: 75px;
+  height: 65px;
+  font-size: 30pt;
+  margin: 4px 2px;
+  font-weight: bold;
+  padding-top: 10px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.celula:hover{
+  background-color: rgba(91, 182, 152, 0.651);
+}
+
+.voltar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #2BA2FF;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+
+.sumir{
+  display: none !important;
+}
+
+.voltar:hover{
+  background-color: #43a8f586;
+}
